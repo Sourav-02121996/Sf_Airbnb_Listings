@@ -30,10 +30,7 @@ function parseAmenities(a) {
 
 function cardHTML(item) {
   const img = item.picture_url || "https://placehold.co/600x400?text=No+Photo";
-  const hostImg =
-    item.host_thumbnail_url ||
-    item.host_picture_url ||
-    "https://placehold.co/64x64?text=Host";
+  const hostImg = item.host_thumbnail_url || item.host_picture_url || "https://placehold.co/64x64?text=Host";
   const amenities = parseAmenities(item.amenities).slice(0, 6);
   const rating = item.review_scores_rating;
   return `
